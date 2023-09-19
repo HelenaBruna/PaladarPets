@@ -1,0 +1,26 @@
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.buttons {
+  background-color: none; 
+  border: none;
+  color: black;
+  padding: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  float: right;
+  }
+  .mat-toolbar {
+    background-color: #ff5733; /* Substitua com a cor desejada */
+  }
+
+/* 
+
+display: inline-block;
+padding: 15px 30px;
+*/
+
+  
