@@ -1,20 +1,21 @@
-.example-button-row button,
+/*.example-button-row button,
 .example-button-row a {
   margin-right: 8px;
-}
+} */
 
 .buttons {
   background-color: none; 
   border: none;
-  color: black;
+  color:white;
   padding: none;
   text-align: center;
   text-decoration: none;
+  justify-content: flex-end;
   font-size: 16px;
   float: right;
   }
   .mat-toolbar {
-    background-color: #ff5733; /* Substitua com a cor desejada */
+    background-color: #525252;
   }
 
 /* 
