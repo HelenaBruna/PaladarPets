@@ -1,27 +1,24 @@
-/*.example-button-row button,
-.example-button-row a {
-  margin-right: 8px;
-} */
 
 .buttons {
-  background-color: none; 
-  border: none;
+ /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Lato', sans-serif;
+  
+  margin-right: 6px;
   color:white;
   padding: none;
   text-align: center;
-  text-decoration: none;
-  justify-content: flex-end;
-  font-size: 16px;
-  float: right;
+  font-size: 18px;
   }
   .mat-toolbar {
     background-color: #525252;
+    justify-content: flex-end;
   }
 
 /* 
-
+text-align: center;
 display: inline-block;
 padding: 15px 30px;
+font-weight: 500;
 */
 
   

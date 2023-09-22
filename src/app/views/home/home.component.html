@@ -1,22 +1,37 @@
+<head>
+  <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+--->
+<<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+</head>
+
 <!---Menu e Botões-->
 <p>
   <mat-toolbar class="mat-toolbar">
     <!-- <span>Cansei ta?</span> -->
-    <span class="buttons">
+    <span class="buttons"> 
+    <button mat-button class="buttons" [matMenuTriggerFor]="homeMenu">Home</button>
+    <mat-menu #homeMenu="matMenu" yPosition="above"> </mat-menu>
+  
     <button mat-button class="buttons" [matMenuTriggerFor]="loginMenu">Login</button>
     <mat-menu #loginMenu="matMenu" yPosition="above"> </mat-menu>
   
-    <button mat-button class="buttons" [matMenuTriggerFor]="cadastroMenu">Cadastro</button>
-    <mat-menu #cadastroMenu="matMenu" yPosition="above"> </mat-menu>
-  
-    <button mat-button class="buttons"[matMenuTriggerFor]="scanMenu">Scanner</button>
-    <mat-menu #scanMenu="matMenu" xPosition="before"> </mat-menu>
+    <button mat-button class="buttons"[matMenuTriggerFor]="cadastroMenu">Cadastro</button>
+    <mat-menu #cadastroMenu="matMenu" xPosition="before"> </mat-menu>
 
-    <button mat-button class="buttons"[matMenuTriggerFor]="comofuncionaMenu">Como Funciona</button>
-    <mat-menu #comofuncionaMenu="matMenu" xPosition="after"> </mat-menu>
+    <button mat-button class="buttons"[matMenuTriggerFor]="scanMenu">Scanner</button>
+    <mat-menu #scanMenu="matMenu" xPosition="after"> </mat-menu>
   </span>
   </mat-toolbar>
 </p> 
+
+<!--Video-->
+<video width="700" height="700" src="C:\Users\bruna\ifsp-tcc-angular-teste\src\video-homepage" autoplay loop>
+</video>
 
 
 
