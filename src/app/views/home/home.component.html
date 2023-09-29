@@ -3,6 +3,7 @@
 <!-- Você pode observar o mesmo padrão para os components login, cadastro, scanner -->
 <!---Menu e Botões-->
 <app-nav-menu></app-nav-menu>
+
 <!--Video-->
 
 <!-- <video class="video" autoplay loop>
@@ -11,7 +12,7 @@
 
 <!--Carousel-->
 <section>
-  <div style="width: 60%; height: 400px; margin-left: 20%">
+  <div class="carousel-style">
     <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
        <slide *ngFor="let slide of slides; let index=index">
           <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">

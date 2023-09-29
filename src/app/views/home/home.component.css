@@ -8,3 +8,10 @@ font-weight: 500;
 .video {
   width: 100%;
 }
+
+.carousel-style {
+  width: 60%; 
+  height: 400px; 
+  margin-left: 20%;
+  margin-top: 1%;
+}
