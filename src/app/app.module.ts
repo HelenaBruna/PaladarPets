@@ -11,10 +11,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 import { ScannerComponent } from './views/scanner/scanner.component';
 import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
 import { LoginComponent } from './views/login/login.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // aqui eu estou referenciado as rotas, no caso cada rota irá aparecer um component
 // por exemplo:
@@ -45,7 +47,8 @@ const routes: Routes = [
     MatIconModule,
     MatButtonModule,
     BsDropdownModule,
-    CarouselModule
+    CarouselModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
