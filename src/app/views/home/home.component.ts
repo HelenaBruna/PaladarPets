@@ -20,5 +20,6 @@ export class HomeComponent {
 
   noWrapSlides = false;
   showIndicator = true;
+  cycleInterval = 3000;
 
 }

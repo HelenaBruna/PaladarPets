@@ -12,15 +12,15 @@
 
 <!--Carousel-->
 <section>
-  <div class="carousel-style">
-    <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
-       <slide *ngFor="let slide of slides; let index=index">
-          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
-          <div class="carousel-caption">
-       <h4>Slide {{index}}</h4>
-             <p>{{slide.text}}</p>
-          </div>
-       </slide>
-    </carousel>
- </div>
+   <div class="carousel-style">
+      <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator" [interval]="cycleInterval">
+         <slide *ngFor="let slide of slides; let index=index">
+            <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+            <div class="carousel-caption">
+               <h4>Slide {{index}}</h4>
+               <p>{{slide.text}}</p>
+            </div>
+         </slide>
+      </carousel>
+   </div>
 </section>
