@@ -16,6 +16,10 @@ import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
 import { LoginComponent } from './views/login/login.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 
+// aqui eu estou referenciado as rotas, no caso cada rota irá aparecer um component
+// por exemplo:
+// a rota --> localhost:4200/scanner --> irá acessar o component scanner
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'scanner',  component: ScannerComponent },
