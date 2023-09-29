@@ -11,6 +11,7 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
 })
 export class HomeComponent {
 
+  // aqui podemos linkar as imagens para aparecer no carousel, por enquanto deixei a mesma imagem
   slides = [
     {image: 'assets/img/noimages.jpg', text: 'First'},
     {image: 'assets/img/noimages.jpg', text: 'Second'},
