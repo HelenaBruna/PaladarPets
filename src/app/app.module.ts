@@ -13,10 +13,14 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ScannerComponent } from './views/scanner/scanner.component';
 import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
+import { LoginComponent } from './views/login/login.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'scanner',  component: ScannerComponent }
+  { path: 'scanner',  component: ScannerComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'cadastro', component: CadastroComponent }
 ];
 
 @NgModule({
@@ -24,7 +28,9 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     ScannerComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    LoginComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

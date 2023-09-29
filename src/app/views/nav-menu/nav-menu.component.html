@@ -1,18 +1,22 @@
-<p>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<header>
     <mat-toolbar class="mat-toolbar">
-      <!-- <span>Cansei ta?</span> -->
       <span class="buttons">
         <button mat-button class="buttons" [matMenuTriggerFor]="homeMenu" routerLink="">Home</button>
         <mat-menu #homeMenu="matMenu" yPosition="above"> </mat-menu>
   
-        <button mat-button class="buttons" [matMenuTriggerFor]="loginMenu">Login</button>
+        <button mat-button class="buttons" [matMenuTriggerFor]="loginMenu" routerLink="/login">Login</button>
         <mat-menu #loginMenu="matMenu" yPosition="above"> </mat-menu>
   
-        <button mat-button class="buttons" [matMenuTriggerFor]="cadastroMenu">Cadastro</button>
+        <button mat-button class="buttons" [matMenuTriggerFor]="cadastroMenu" routerLink="/cadastro">Cadastro</button>
         <mat-menu #cadastroMenu="matMenu" xPosition="before"> </mat-menu>
   
         <button mat-button class="buttons" [matMenuTriggerFor]="scanMenu" routerLink="/scanner">Scanner</button>
         <mat-menu #scanMenu="matMenu" xPosition="after"> </mat-menu>
       </span>
     </mat-toolbar>
-  </p>
+</header>
