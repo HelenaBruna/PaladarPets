@@ -9,6 +9,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 const routes: Routes = [
 { 
   path: '',
@@ -28,8 +31,9 @@ const routes: Routes = [
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
-
+    MatButtonModule,
+    BsDropdownModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

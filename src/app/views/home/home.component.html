@@ -28,8 +28,22 @@
     </span>
   </mat-toolbar>
 </p>
-
 <!--Video-->
-<video class="video" autoplay loop>
+<!-- <video class="video" autoplay loop>
   <source src="../../../assets/video/video-homepage.mp4" type="video/mp4">
-</video>
+</video> -->
+
+<!--Carousel-->
+<section>
+  <div style="width: 60%; height: 400px; margin-left: 20%">
+    <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
+       <slide *ngFor="let slide of slides; let index=index">
+          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+          <div class="carousel-caption">
+       <h4>Slide {{index}}</h4>
+             <p>{{slide.text}}</p>
+          </div>
+       </slide>
+    </carousel>
+ </div>
+</section>
