@@ -11,18 +11,20 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ScannerComponent } from './views/scanner/scanner.component';
+import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
 
 const routes: Routes = [
-{ 
-  path: '',
-  component: HomeComponent
-}
+  { path: '', component: HomeComponent },
+  { path: 'scanner',  component: ScannerComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ScannerComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule,

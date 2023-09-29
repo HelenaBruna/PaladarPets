@@ -10,25 +10,9 @@
 </head>
 
 <!---Menu e Botões-->
-<p>
-  <mat-toolbar class="mat-toolbar">
-    <!-- <span>Cansei ta?</span> -->
-    <span class="buttons">
-      <button mat-button class="buttons" [matMenuTriggerFor]="homeMenu">Home</button>
-      <mat-menu #homeMenu="matMenu" yPosition="above"> </mat-menu>
-
-      <button mat-button class="buttons" [matMenuTriggerFor]="loginMenu">Login</button>
-      <mat-menu #loginMenu="matMenu" yPosition="above"> </mat-menu>
-
-      <button mat-button class="buttons" [matMenuTriggerFor]="cadastroMenu">Cadastro</button>
-      <mat-menu #cadastroMenu="matMenu" xPosition="before"> </mat-menu>
-
-      <button mat-button class="buttons" [matMenuTriggerFor]="scanMenu">Scanner</button>
-      <mat-menu #scanMenu="matMenu" xPosition="after"> </mat-menu>
-    </span>
-  </mat-toolbar>
-</p>
+<app-nav-menu></app-nav-menu>
 <!--Video-->
+
 <!-- <video class="video" autoplay loop>
   <source src="../../../assets/video/video-homepage.mp4" type="video/mp4">
 </video> -->
