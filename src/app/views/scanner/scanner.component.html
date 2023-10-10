@@ -9,10 +9,10 @@
                     <fa-icon [icon]="faSearch"></fa-icon>
                 </span>
             </div>
-            <input type="text" class="form-control" placeholder="Digite o código de barras">
+            <input type="text" class="form-control" placeholder="Digite o código de barras" [(ngModel)]="codigoBarra"/>
         </div>          
     </div>
 
-    <button type="submit" class="btn btn-success margin-button-search">Procurar</button>
+    <button type="submit" class="btn btn-success margin-button-search" (click)="Pesquisar()">Procurar</button>
 </div>
 
