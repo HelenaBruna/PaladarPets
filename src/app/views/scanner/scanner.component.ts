@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { codigo } from 'src/app/models/codigo';
 import { ScannerServiceService } from 'src/app/services/scanner-service.service';
 
 @Component({
@@ -7,32 +8,29 @@ import { ScannerServiceService } from 'src/app/services/scanner-service.service'
   templateUrl: './scanner.component.html',
   styleUrls: ['./scanner.component.css']
 })
-export class ScannerComponent {
+export class ScannerComponent implements OnInit {
   
   faSearch = faSearch;
-
-  dadosRacao = {
-    "porcentagemUmidadeMax": 100,
-    "umidadeMaxGKG": 100,
-    "porcentagemProteinaBrutaMin": 100,
-    "proteinaBrutaMinGKG": 100,
-    "proteinaMateriaSeca": 100,
-    "porcentagemCalcioMax": 100,
-    "calcioMaxGKG": 100,
-    "calcioMateriaSeca": 100,
-    "porcentagemMateriaFibrosa": 100,
-    "materiaFibrosaGKG": 100
-  }
-
   codigoBarra: string = "";
+
+  codigo: codigo = {
+    codigoBarra: ""
+  }
 
   constructor(private scannerService: ScannerServiceService) {
     
   }
+  
+  ngOnInit(): void {
+    this.scannerService.getTest().subscribe( (retorno) => {
+      console.log(retorno)
+    })
+  }
 
 
   Pesquisar(): void {
-    this.scannerService.getClassificacaoRacao(this.dadosRacao).subscribe((retorno) => {
+    this.codigo.codigoBarra = this.codigoBarra;
+    this.scannerService.ClassificacaoRacao(this.codigo).subscribe((retorno) => {
       console.log(retorno)
     })
   }
