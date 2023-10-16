@@ -9,10 +9,13 @@
                     <fa-icon [icon]="faSearch"></fa-icon>
                 </span>
             </div>
-            <input type="text" class="form-control" placeholder="Digite o código de barras" [(ngModel)]="codigoBarra"/>
+            <input type="text" class="form-control" placeholder="Digite o código de barras" [(ngModel)]="barCode"/>
         </div>          
     </div>
 
-    <button type="submit" class="btn btn-success margin-button-search" (click)="Pesquisar()">Procurar</button>
+    <button type="submit" class="btn btn-success margin-button-search" (click)="Search()">Procurar</button>
+
+    <h2>Classe: </h2>
+    <h3>{{classifier.class}}</h3>
 </div>
 

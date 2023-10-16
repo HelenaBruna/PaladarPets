@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { codigo } from 'src/app/models/codigo';
+import { classifier } from 'src/app/models/classifier';
 import { ScannerServiceService } from 'src/app/services/scanner-service.service';
 
 @Component({
@@ -8,30 +8,23 @@ import { ScannerServiceService } from 'src/app/services/scanner-service.service'
   templateUrl: './scanner.component.html',
   styleUrls: ['./scanner.component.css']
 })
-export class ScannerComponent implements OnInit {
+export class ScannerComponent  {
   
   faSearch = faSearch;
-  codigoBarra: string = "";
+  barCode: string = "";
 
-  codigo: codigo = {
-    codigoBarra: ""
+  classifier: classifier = {
+    class: "",
+    cluster: 0
   }
 
   constructor(private scannerService: ScannerServiceService) {
     
   }
   
-  ngOnInit(): void {
-    this.scannerService.getTest().subscribe( (retorno) => {
-      console.log(retorno)
-    })
-  }
-
-
-  Pesquisar(): void {
-    this.codigo.codigoBarra = this.codigoBarra;
-    this.scannerService.ClassificacaoRacao(this.codigo).subscribe((retorno) => {
-      console.log(retorno)
+  Search(): void {
+    this.scannerService.ClassificacaoRacao(this.barCode).subscribe((response: classifier) => {
+      this.classifier = response
     })
   }
 

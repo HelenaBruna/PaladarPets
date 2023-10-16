@@ -20,17 +20,9 @@ export class ScannerServiceService {
   
   constructor(private httpReq: HttpClient) { }
 
-  getTest(): Observable<any> {
-    return this.httpReq.get<any>(this.apiUrl).pipe(
-      retry(1),
-      catchError(this.observarBug)
-    )
-  }
 
-  ClassificacaoRacao(codigoBarra: any): Observable<any> {
-
-    console.log(JSON.stringify(codigoBarra));
-    return this.httpReq.post<any>(this.apiUrl, JSON.stringify(codigoBarra)).pipe(
+  ClassificacaoRacao(codigoBarra: string): Observable<any> {
+    return this.httpReq.get<any>(this.apiUrl + '?codigoBarra=' + codigoBarra).pipe(
       retry(1),
       catchError(this.observarBug)
     )
