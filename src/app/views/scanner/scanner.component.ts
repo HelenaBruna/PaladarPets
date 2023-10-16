@@ -23,7 +23,7 @@ export class ScannerComponent  {
   }
   
   Search(): void {
-    this.scannerService.ClassificacaoRacao(this.barCode).subscribe((response: classifier) => {
+    this.scannerService.GetFeedClassification(this.barCode).subscribe((response: classifier) => {
       this.classifier = response
     })
   }

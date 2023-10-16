@@ -9,26 +9,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ScannerServiceService {
 
   apiUrl = "https://southamerica-east1-deductive-notch-396522.cloudfunctions.net/classifier"
-
-
-  httpHeader = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    })
-  }
-  
+ 
   constructor(private httpReq: HttpClient) { }
 
-
-  ClassificacaoRacao(codigoBarra: string): Observable<any> {
+  GetFeedClassification(codigoBarra: string): Observable<any> {
     return this.httpReq.get<any>(this.apiUrl + '?codigoBarra=' + codigoBarra).pipe(
       retry(1),
-      catchError(this.observarBug)
+      catchError(this.logBug)
     )
   }
 
-  observarBug(bug: any) {
+  logBug(bug: any) {
     let infosBug: any = ''
 
     if (bug.error instanceof ErrorEvent) {
