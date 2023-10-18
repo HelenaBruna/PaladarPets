@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Routes, RouterModule} from '@angular/router';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; 
+import { Routes, RouterModule } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 //
@@ -28,7 +28,7 @@ import { ScannerServiceService } from './services/scanner-service.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'scanner',  component: ScannerComponent },
+  { path: 'scanner', component: ScannerComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
 ];

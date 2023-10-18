@@ -1,17 +1,15 @@
-
 <!--No menu, como vai ser um padrão para cada pagina ou na maioria, eu criei um component somente para o menu e eu posso usar-lo da seguinte forma: -->
 <!-- Você pode observar o mesmo padrão para os components login, cadastro, scanner -->
 <!---Menu e Botões-->
-<app-nav-menu></app-nav-menu>
 
 <!--Video-->
-
-<!-- <video class="video" autoplay loop>
-  <source src="../../../assets/video/video-homepage.mp4" type="video/mp4">
-</video> -->
+<app-nav-menu></app-nav-menu>
+<video class="video" autoplay loop>
+   <source src="../../../assets/video/video-homepage.mp4" type="video/mp4">
+</video>
 
 <!--Carousel-->
-<section>
+<!-- <section>
    <div class="carousel-style">
       <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator" [interval]="cycleInterval">
          <slide *ngFor="let slide of slides; let index=index">
@@ -23,4 +21,8 @@
          </slide>
       </carousel>
    </div>
+</section> -->
+
+<section style="position: absolute; top: 25%; left: 8%">
+   <h1 class="title">PALADAR PET</h1>
 </section>
