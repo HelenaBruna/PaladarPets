@@ -163,3 +163,7 @@
   font-weight: bold;
   /* border: 1px solid blue; */
 }
+
+@media (max-width: 768px) {
+
+}

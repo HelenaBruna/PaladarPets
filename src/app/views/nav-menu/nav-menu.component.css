@@ -21,3 +21,34 @@
     border-bottom: 4px solid;
     border-radius: 2px;
 }
+
+.header-position {
+    position: absolute; top: 1%; left: 2%;
+}
+
+
+@media (max-width: 768px) {
+
+    .header-position {
+        position: relative;
+        top: 0%;
+        left: 0%;
+    }
+
+    .nav-menu-buttons {
+        color: var(--green-pet) !important;
+        font-size: 16px !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+        line-height: normal !important;
+    }
+
+    .nav-menu-button-active {
+        color: var(--green-pet) !important;
+        border-bottom: 0px solid;
+    }
+
+    .nav-menu-header {
+        background-color: gray !important;
+    }
+}
