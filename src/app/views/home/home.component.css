@@ -88,7 +88,7 @@
   background: #8CC4D3;
 }
 
-.layout-about-description-width {
+.layout-width {
   width: 100%;
 }
 
@@ -118,3 +118,48 @@
   line-height: normal;
 }
 
+.layout-how-to-use {
+  width: 100%;
+  height: 500px;
+  background: var(--green-pet);
+}
+
+.layout-number-how-to-use {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+.number-how-to-use {
+  /* border: 1px solid yellow; */
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 74px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.layout-number-width {
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  align-items: center; 
+}
+
+.text-number-how-to-use {
+  display: flex;
+  width: 100%;
+  color: #000;
+  font-size: 15.5px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 2.3%;
+  justify-content: center; 
+  align-items: center; 
+  align-content: center;  
+  font-weight: bold;
+  /* border: 1px solid blue; */
+}
