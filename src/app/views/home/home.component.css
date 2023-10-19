@@ -61,11 +61,9 @@
   width: 100%;
   height: 100%;
   display: flex;
-  /* border: 1px solid red; */
 }
 
 .layout-about-icon {
-  /* border: 1px solid yellow; */
   width: 50%;
   display: flex;
   justify-content: center;
@@ -80,5 +78,43 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 27px; /* 135% */
+  line-height: 27px; 
 }
+
+.layout-about-description{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  background: #8CC4D3;
+}
+
+.layout-about-description-width {
+  width: 100%;
+}
+
+.layout-about-text{
+  width: 70%;
+}
+
+.title-about-description {
+  color: #6F4C22;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 6%;
+}
+
+.text-about-description {
+  margin-left: 6%;
+  margin-top: 1%;
+  width: 650px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
