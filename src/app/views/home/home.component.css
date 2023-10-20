@@ -173,7 +173,16 @@
   /* border: 1px solid blue; */
 }
 
+
 @media (max-width: 768px) {
+
+  .height-mobile-video {
+    height: 200px;
+  }
+
+  .absolute{
+    position: absolute;
+  }
 
   .layout-title{
     width: 80%;
