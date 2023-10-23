@@ -25,6 +25,7 @@ import { ScannerServiceService } from './services/scanner-service.service';
 // aqui eu estou referenciado as rotas, no caso cada rota irá aparecer um component
 // por exemplo:
 // a rota --> localhost:4200/scanner --> irá acessar o component scanner
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -54,7 +55,8 @@ const routes: Routes = [
     CarouselModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ZXingScannerModule
   ],
   providers: [ScannerServiceService],
   bootstrap: [AppComponent]

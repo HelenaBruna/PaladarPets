@@ -9,8 +9,8 @@
                     <fa-icon [icon]="faSearch"></fa-icon>
                 </span>
             </div>
-            <input type="text" class="form-control" placeholder="Digite o código de barras" [(ngModel)]="barCode"/>
-        </div>          
+            <input type="text" class="form-control" placeholder="Digite o código de barras" [(ngModel)]="barCode" />
+        </div>
     </div>
 
     <button type="submit" class="btn btn-success margin-button-search" (click)="Search()">Procurar</button>
@@ -19,3 +19,7 @@
     <h3>{{classifier.class}}</h3>
 </div>
 
+<zxing-scanner [torch]="false" [formats]="allowedFormats" (scanSuccess)="onScanSuccess($event)"></zxing-scanner>
+<div *ngIf="result">
+    <p>Scanned Data: {{ result }}</p>
+</div>

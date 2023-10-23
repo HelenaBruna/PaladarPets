@@ -24,10 +24,12 @@
     "@fortawesome/fontawesome-svg-core": "~1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@popperjs/core": "^2.11.8",
+    "@zxing/ngx-scanner": "^16.1.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.3.2",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^11.0.2",
+    "ngx-scanner": "^0.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
