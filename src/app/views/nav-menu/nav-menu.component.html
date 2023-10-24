@@ -4,7 +4,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
-<header class="header-position">
+<header class="header-position" [ngClass]="{'header-color' : router.routerState.snapshot.url !== '/'}">
   <!--o routerLink irá linkar para qual component eu quero enxergar-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary nav-menu-header">
     <div class="container-fluid">

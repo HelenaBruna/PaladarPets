@@ -1,25 +1,38 @@
 <app-nav-menu></app-nav-menu>
-<div class="scanner-layout">
-    <h2>Digite o código de barras, abaixo: </h2>
 
-    <div>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" style="height: 100%;">
-                    <fa-icon [icon]="faSearch"></fa-icon>
-                </span>
+<div>
+    <section style="margin-top: 10%;">
+        <div class="scanner-layout">
+            <h2 style="color: #FFF">Digite o código de barras, abaixo: </h2>
+
+            <div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style="height: 100%;">
+                            <fa-icon [icon]="faSearch"></fa-icon>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Digite o código de barras"
+                        [(ngModel)]="barCode" />
+                </div>
             </div>
-            <input type="text" class="form-control" placeholder="Digite o código de barras" [(ngModel)]="barCode" />
+
+            <div style="display: flex;">
+                <button type="submit" class="btn btn-success margin-button-search" (click)="Search()">Procurar</button>
+                <button type="submit" style="margin-left: 20px;" class="btn btn-success margin-button-search"
+                    (click)="OpenCam()">Abrir
+                    camera</button>
+            </div>
+
+            <h2>Classe: </h2>
+            <h3>{{classifier.class}}</h3>
         </div>
-    </div>
+    </section>
 
-    <button type="submit" class="btn btn-success margin-button-search" (click)="Search()">Procurar</button>
-
-    <h2>Classe: </h2>
-    <h3>{{classifier.class}}</h3>
-</div>
-
-<zxing-scanner [torch]="false" [formats]="allowedFormats" (scanSuccess)="onScanSuccess($event)"></zxing-scanner>
-<div *ngIf="result">
-    <p>Scanned Data: {{ result }}</p>
+    <section [hidden]="hideCam">
+        <zxing-scanner [torch]="false" [formats]="allowedFormats" (scanSuccess)="onScanSuccess($event)"></zxing-scanner>
+        <div *ngIf="result">
+            <p>Scanned Data: {{ result }}</p>
+        </div>
+    </section>
 </div>

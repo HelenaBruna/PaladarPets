@@ -4,6 +4,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body style="width: 100%;">
+<body style="width: 100%;" [ngClass]="{'background-app' : router.routerState.snapshot.url !== '/'}">
     <router-outlet></router-outlet>
 </body>

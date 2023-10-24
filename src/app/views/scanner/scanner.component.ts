@@ -16,13 +16,14 @@ export class ScannerComponent {
   allowedFormats = [BarcodeFormat.DATA_MATRIX, BarcodeFormat.QR_CODE, BarcodeFormat.EAN_8, BarcodeFormat.CODE_39, BarcodeFormat.CODE_128, BarcodeFormat.CODE_93, BarcodeFormat.EAN_13]; // Adjust as needed
   result: Result;
 
+  hideCam: boolean = true;
+
   onScanSuccess(result: any): void {
     this.result = result;
 
     this.barCode = result;
     this.Search();
   }
-
 
   faSearch = faSearch;
   barCode: string = "";
@@ -36,10 +37,16 @@ export class ScannerComponent {
 
   }
 
+  OpenCam(): void {
+    this.hideCam = false;
+  }
+
   Search(): void {
-    this.scannerService.GetFeedClassification(this.barCode).subscribe((response: classifier) => {
-      this.classifier = response
-    })
+    if (this.barCode != "") {
+      this.scannerService.GetFeedClassification(this.barCode).subscribe((response: classifier) => {
+        this.classifier = response
+      })
+    }
   }
 
 

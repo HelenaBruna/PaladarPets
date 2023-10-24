@@ -26,6 +26,10 @@
     position: absolute; top: 1%; left: 2%;
 }
 
+.header-color{
+    background: #AF895E;
+}
+
 
 @media (max-width: 768px) {
 
