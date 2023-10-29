@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { classifier } from 'src/app/models/classifier';
+import { portion } from 'src/app/models/portion';
 import { ScannerServiceService } from 'src/app/services/scanner-service.service';
 
 import { Result } from '@zxing/library';
@@ -22,23 +23,30 @@ export class ScannerComponent {
   showClass: boolean = false;
   showLoading: boolean = false;
 
-  onScanSuccess(result: any): void {
-    this.result = result;
-
-    this.barCode = result;
-    this.Search();
-  }
-
   faSearch = faSearch;
   barCode: string = "";
 
   classifier: classifier = {
     class: "",
-    cluster: 0
+    cluster: 0,
+    sql_data: {
+      calcioMateriaSeca: 0,
+      calcioMaxGKG: 0,
+      materiaFibrosaGKG: 0,
+      porcentagemCalcioMax: 0,
+      porcentagemMateriaFibrosa: 0,
+      porcentagemProteinaBrutaMin: 0,
+      proteinaBrutaMinGKG: 0,
+      proteinaMateriaSeca: 0,
+      umidadeMaxGKG: 0,
+    }
   }
 
-  constructor(private scannerService: ScannerServiceService) {
+  proteinProgressBar = { 'width': '0%' }
+  calciumProgressBar = { 'width': '0%' }
+  fibrousMatterProgressBar = { 'width': '0%' }
 
+  constructor(private scannerService: ScannerServiceService) {
   }
 
   OpenCam(): void {
@@ -51,6 +59,9 @@ export class ScannerComponent {
       this.showLoading = true;
       this.scannerService.GetFeedClassification(this.barCode).subscribe((response: classifier) => {
         this.classifier = response;
+        this.proteinProgressBar.width = this.classifier.sql_data.porcentagemProteinaBrutaMin + "%";
+        this.calciumProgressBar.width = this.classifier.sql_data.porcentagemCalcioMax + "%";
+        this.fibrousMatterProgressBar.width = this.classifier.sql_data.porcentagemMateriaFibrosa + "%";
         this.showClass = true;
         this.showLoading = false;
       })
@@ -62,6 +73,12 @@ export class ScannerComponent {
     this.showClass = false;
   }
 
+  OnScanSuccess(result: any): void {
+    this.result = result;
+
+    this.barCode = result;
+    this.Search();
+  }
 
 
 }

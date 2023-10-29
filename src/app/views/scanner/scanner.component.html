@@ -30,7 +30,7 @@
     </section>
 
     <section [hidden]="hideCam">
-        <zxing-scanner [torch]="false" [formats]="allowedFormats" (scanSuccess)="onScanSuccess($event)"></zxing-scanner>
+        <zxing-scanner [torch]="false" [formats]="allowedFormats" (scanSuccess)="OnScanSuccess($event)"></zxing-scanner>
         <!-- <div *ngIf="result">
             <p>Scanned Data: {{ result }}</p>
         </div> -->
@@ -58,17 +58,20 @@
             <span>Proteína:</span>
             <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
                 aria-valuemax="100">
-                <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                <div class="progress-bar bg-success" [ngStyle]="proteinProgressBar">
+                    {{classifier.sql_data.porcentagemProteinaBrutaMin}}%</div>
             </div>
             <span>Cálcio:</span>
             <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0"
                 aria-valuemax="100">
-                <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+                <div class="progress-bar bg-info text-dark" [ngStyle]="calciumProgressBar">
+                    {{classifier.sql_data.porcentagemCalcioMax}}%</div>
             </div>
             <span>Matéria fibrosa:</span>
             <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
                 aria-valuemax="100">
-                <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+                <div class="progress-bar bg-warning text-dark" [ngStyle]="fibrousMatterProgressBar">
+                    {{classifier.sql_data.porcentagemMateriaFibrosa}}%</div>
             </div>
             <!-- FOSFORO:
             <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0"

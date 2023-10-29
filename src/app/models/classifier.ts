@@ -1,4 +1,7 @@
+import { portion } from "./portion";
+
 export interface classifier {
     class: string,
-    cluster: number
+    cluster: number,
+    sql_data: portion;
 }
