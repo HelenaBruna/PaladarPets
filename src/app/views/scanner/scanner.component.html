@@ -19,8 +19,8 @@
 
             <div style="display: flex;">
                 <button type="submit" class="btn margin-button-search" (click)="Search()">Procurar</button>
-                <button type="submit" style="margin-left: 20px;" class="btn margin-button-search"
-                    (click)="OpenCam()">Abrir
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" style="margin-left: 20px;"
+                    class="btn margin-button-search" (click)="OpenCam()">Abrir
                     camera</button>
             </div>
 
@@ -29,13 +29,32 @@
         </div>
     </section>
 
-    <section [hidden]="hideCam">
-        <zxing-scanner [torch]="false" [formats]="allowedFormats" (scanSuccess)="OnScanSuccess($event)"></zxing-scanner>
-        <!-- <div *ngIf="result">
-            <p>Scanned Data: {{ result }}</p>
-        </div> -->
-    </section>
+
 </div>
+
+<section [hidden]="hideCam">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Faça a leitura de um código de barrras</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <zxing-scanner [torch]="false" [formats]="allowedFormats"
+                        (scanSuccess)="OnScanSuccess($event)"></zxing-scanner>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close-popup"
+                        style="color: #FFF; background-color: var(--green-pet);" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 <section class="section-loading" [hidden]="!showLoading">
     <div class="loading-style">
