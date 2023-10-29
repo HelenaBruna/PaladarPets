@@ -1,7 +1,7 @@
 <app-nav-menu></app-nav-menu>
 
 <div>
-    <section style="margin-top: 10%;">
+    <section [hidden]="hideSearch" class="section-layout">
         <div class="scanner-layout">
             <h2 style="color: #FFF">Digite o código de barras, abaixo: </h2>
 
@@ -18,21 +18,67 @@
             </div>
 
             <div style="display: flex;">
-                <button type="submit" class="btn btn-success margin-button-search" (click)="Search()">Procurar</button>
-                <button type="submit" style="margin-left: 20px;" class="btn btn-success margin-button-search"
+                <button type="submit" class="btn margin-button-search" (click)="Search()">Procurar</button>
+                <button type="submit" style="margin-left: 20px;" class="btn margin-button-search"
                     (click)="OpenCam()">Abrir
                     camera</button>
             </div>
 
-            <h2>Classe: </h2>
-            <h3>{{classifier.class}}</h3>
+            <!-- <h2>Classe: </h2>
+            <h3>{{classifier.class}}</h3>-->
         </div>
     </section>
 
     <section [hidden]="hideCam">
         <zxing-scanner [torch]="false" [formats]="allowedFormats" (scanSuccess)="onScanSuccess($event)"></zxing-scanner>
-        <div *ngIf="result">
+        <!-- <div *ngIf="result">
             <p>Scanned Data: {{ result }}</p>
-        </div>
+        </div> -->
     </section>
 </div>
+
+<section class="section-loading" [hidden]="!showLoading">
+    <div class="loading-style">
+        <img style="width: 80%;" src="../../../assets//video/dog-gif-loading-g.gif" alt="">
+        <p>Processando informações...</p>
+    </div>
+</section>
+
+<section class="section-class" [hidden]="!showClass">
+    <div class="layout-img">
+        <img class="layout-img-dog" src="../../../assets/video/Cautious dog.gif" alt="">
+    </div>
+    <div class="layout-class">
+        <div>
+            <div class="class-style">
+                <span class="font-class-style">Classe: {{classifier.class}}</span>
+            </div>
+        </div>
+        <div class="percent-layout">
+            PROTEINA:
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-success" style="width: 25%">25%</div>
+            </div>
+            CALCIO:
+            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+            </div>
+            GORDURA:
+            <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+            </div>
+            FOSFORO:
+            <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+            </div>
+        </div>
+        <div class="new-search-layout">
+            <button class="btn-new-search" (click)="NewSearch()">Buscar novamente</button>
+        </div>
+    </div>
+
+</section>

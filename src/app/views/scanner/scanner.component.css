@@ -7,7 +7,145 @@
     margin-top: 3%;
 }
 
+.section-layout {
+    margin-top: 10%;
+}
+
 .margin-button-search {
     margin-top: 5%;
     font-weight: bold;
+    background: var(--green-pet);
+}
+
+.section-class {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    /* border: 1px solid red; */
+}
+
+.layout-img{
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.layout-class {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.class-style {
+    width: 50%;
+    height: 90px;
+    margin-left: 25%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #9BD49D;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.font-class-style {
+    color: #FFF;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.percent-layout {
+    color: #FFF;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: normal;
+    width: 80%; 
+    margin-left: 10%; 
+    margin-top: 12%
+}
+
+.layout-img-dog {
+    margin-left: 10%;
+}
+
+.section-loading {
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.loading-style{
+    color: #FFF;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: normal;
+}
+
+.new-search-layout {
+    margin-left: 10%; 
+}
+
+.btn-new-search {
+    width: 264px;
+    height: 71px;
+    border-radius: 10px;
+    border-bottom: 0.3px solid #525252;
+    background: var(--green-pet);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    color: #FFF;
+    font-family: var(--main-font);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5%;
+
+}
+
+@media (max-width: 768px) {
+
+    .section-class {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .layout-img {
+        width: 100%;
+    }
+
+    .layout-img-dog {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .layout-class {
+        width: 100%;
+    }
+
+    .class-style {
+        width: 85%;
+        margin-left: 7%;
+    }
+
+    .new-search-layout {
+        height: 200px;
+    }
+
+    .btn-new-search {
+        width: 90%;
+        margin-top: 10%;
+    }
 }

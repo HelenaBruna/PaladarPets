@@ -18,6 +18,9 @@ export class ScannerComponent {
 
   hideCam: boolean = true;
 
+  hideSearch: boolean = false;
+  showClass: boolean = false;
+  showLoading: boolean = false;
 
   onScanSuccess(result: any): void {
     this.result = result;
@@ -44,10 +47,19 @@ export class ScannerComponent {
 
   Search(): void {
     if (this.barCode != "") {
+      this.hideSearch = true;
+      this.showLoading = true;
       this.scannerService.GetFeedClassification(this.barCode).subscribe((response: classifier) => {
-        this.classifier = response
+        this.classifier = response;
+        this.showClass = true;
+        this.showLoading = false;
       })
     }
+  }
+
+  NewSearch() {
+    this.hideSearch = false;
+    this.showClass = false;
   }
 
 
