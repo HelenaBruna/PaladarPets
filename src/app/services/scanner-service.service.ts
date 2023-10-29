@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ScannerServiceService {
 
   apiUrl = "https://southamerica-east1-deductive-notch-396522.cloudfunctions.net/classifier"
- 
+
   constructor(private httpReq: HttpClient) { }
 
   GetFeedClassification(codigoBarra: string): Observable<any> {
@@ -27,8 +27,6 @@ export class ScannerServiceService {
     } else {
       infosBug = `Codigo do erro: ${bug.status}\nMensagem do erro: ${bug.message}`
     }
-
-    console.log(infosBug)
 
     return throwError(() => infosBug)
   }

@@ -18,6 +18,7 @@ export class ScannerComponent {
 
   hideCam: boolean = true;
 
+
   onScanSuccess(result: any): void {
     this.result = result;
 

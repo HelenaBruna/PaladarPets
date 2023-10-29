@@ -131,7 +131,6 @@
 .layout-number-how-to-use {
   width: 100%;
   height: 100%;
-  /* border: 1px solid red; */
 }
 
 .box-how-to-use {
@@ -140,7 +139,6 @@
 }
 
 .number-how-to-use {
-  /* border: 1px solid yellow; */
   color: #FFF;
   font-family: Poppins;
   font-size: 74px;
@@ -170,11 +168,27 @@
   align-items: center; 
   align-content: center;  
   font-weight: bold;
-  /* border: 1px solid blue; */
 }
 
+.svg-mobile {
+  display: none;
+}
+
+.img-cat-about {
+  width: 85%;
+   margin-top: 6%;
+}
 
 @media (max-width: 768px) {
+
+  .svg-desktop {
+    display: none;
+  }
+
+  .svg-mobile {
+    display: block;
+    margin-top: -1px;
+  }
 
   .height-mobile-video {
     height: 200px;
@@ -254,6 +268,18 @@
   .text-about-description {
     font-size: 16px;
     width: 335px;
+  }
+
+  .layout-about-description {
+    height: 850px;
+  }
+
+  .direction-img {
+    flex-direction: column;
+  }
+
+  .img-cat-about { 
+    margin-left: 7%;
   }
  
 }
