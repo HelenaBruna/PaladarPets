@@ -148,4 +148,8 @@
         width: 90%;
         margin-top: 10%;
     }
+
+    .loading-style {
+        margin-left: 15%;
+    }
 }
