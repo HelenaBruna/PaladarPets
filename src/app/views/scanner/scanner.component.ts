@@ -82,8 +82,8 @@ export class ScannerComponent {
 
   OnScanSuccess(result: any): void {
     this.result = result;
-
     this.barCode = result;
+    this.hideCam = false;
     this.Search();
   }
 
