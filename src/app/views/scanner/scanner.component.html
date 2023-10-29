@@ -24,8 +24,10 @@
                     camera</button>
             </div>
 
-            <!-- <h2>Classe: </h2>
-            <h3>{{classifier.class}}</h3>-->
+            <div [hidden]="!showError" style="margin-top: 5%" class="alert alert-danger" role="alert">
+                Código de Barras não encontrado!
+            </div>
+
         </div>
     </section>
 

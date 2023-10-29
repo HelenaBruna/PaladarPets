@@ -23,6 +23,8 @@ export class ScannerComponent {
   showClass: boolean = false;
   showLoading: boolean = false;
 
+  showError: boolean = false;
+
   faSearch = faSearch;
   barCode: string = "";
 
@@ -64,7 +66,12 @@ export class ScannerComponent {
         this.fibrousMatterProgressBar.width = this.classifier.sql_data.porcentagemMateriaFibrosa + "%";
         this.showClass = true;
         this.showLoading = false;
-      })
+      },
+        error => {
+          this.showError = true;
+          this.showLoading = false;
+          this.hideSearch = false;
+        });
     }
   }
 
