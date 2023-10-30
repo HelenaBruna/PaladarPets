@@ -179,6 +179,39 @@
    margin-top: 6%;
 }
 
+.section-better-nutrition {
+  width: 100%;
+  height: 500px;
+  background-color: #6F4C22;
+}
+
+.text-better-nutrition {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px; 
+}
+
+.section-ifsp-tcc {
+  width: 100%;
+  height: 500px;
+  background-color: #FFF;
+}
+
+.text-ifsp-tcc {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px; 
+  color: #000;
+
+}
+
 @media (max-width: 768px) {
 
   .svg-desktop {
