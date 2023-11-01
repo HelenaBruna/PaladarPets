@@ -25,6 +25,8 @@ export class ScannerComponent {
 
   showError: boolean = false;
 
+  showErrorBarCode: boolean = false;
+
   faSearch = faSearch;
   barCode: string = "";
 
@@ -61,6 +63,7 @@ export class ScannerComponent {
       this.showLoading = true;
       this.scannerService.GetFeedClassification(this.barCode).subscribe((response: classifier) => {
         this.classifier = response;
+        this.showErrorBarCode = false;
         this.proteinProgressBar.width = this.classifier.sql_data.porcentagemProteinaBrutaMin + "%";
         this.calciumProgressBar.width = this.classifier.sql_data.porcentagemCalcioMax + "%";
         this.fibrousMatterProgressBar.width = this.classifier.sql_data.porcentagemMateriaFibrosa + "%";
@@ -72,6 +75,8 @@ export class ScannerComponent {
           this.showLoading = false;
           this.hideSearch = false;
         });
+    } else {
+      this.showErrorBarCode = true;
     }
   }
 
