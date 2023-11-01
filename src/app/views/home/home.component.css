@@ -225,6 +225,14 @@
   background-color: #AF895E;
 }
 
+.layout-logo {
+  width: 50%;
+}
+
+.img-logo {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
 
   .svg-desktop {
@@ -333,7 +341,8 @@
   }
 
   .img-footer { 
-    width: 100%;
+    width: 80%;
+    margin-left: 20px;
   }
  
 }
