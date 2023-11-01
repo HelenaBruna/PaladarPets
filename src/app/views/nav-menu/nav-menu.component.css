@@ -14,6 +14,11 @@
     font-weight: 600 !important;
     line-height: normal !important;
 }
+
+.nav-menu-buttons:hover{
+    transition: 1s;
+    color: var(--green-pet) !important;
+}
    
 .nav-menu-button-active {
     height: 55px;
