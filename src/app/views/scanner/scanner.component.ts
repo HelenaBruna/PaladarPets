@@ -65,8 +65,21 @@ export class ScannerComponent {
         this.classifier = response;
         this.showErrorBarCode = false;
         this.proteinProgressBar.width = this.classifier.sql_data.porcentagemProteinaBrutaMin + "%";
-        this.calciumProgressBar.width = this.classifier.sql_data.porcentagemCalcioMax + "%";
-        this.fibrousMatterProgressBar.width = this.classifier.sql_data.porcentagemMateriaFibrosa + "%";
+        
+        if (this.classifier.sql_data.porcentagemCalcioMax < 3) {
+          this.calciumProgressBar.width = 5 + "%";
+        } else {
+          this.calciumProgressBar.width = this.classifier.sql_data.porcentagemCalcioMax + "%";
+        }
+
+
+        if (this.classifier.sql_data.porcentagemMateriaFibrosa) {
+          this.fibrousMatterProgressBar.width = 8 + "%";
+
+        } else {
+          this.fibrousMatterProgressBar.width = this.classifier.sql_data.porcentagemMateriaFibrosa + "%";
+        }
+
         this.showClass = true;
         this.showLoading = false;
       },
