@@ -181,8 +181,8 @@
 
 .section-better-nutrition {
   width: 100%;
-  height: 500px;
-  background-color: #6F4C22;
+  height: 800px;
+  background-color: #AF895E;
 }
 
 .text-better-nutrition {
@@ -193,6 +193,21 @@
   font-style: normal;
   font-weight: 600;
   line-height: 27px; 
+  margin-top: 6%;
+}
+
+.box-better-nutrition {
+  width: 100%; 
+  height: 90%; 
+  display: flex; 
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.better-nutrition-desc {
+  width: 33.3%; 
+  height: 70%; 
+  /* border: 1px solid blue; */
 }
 
 .section-ifsp-tcc {
@@ -346,5 +361,19 @@
     width: 80%;
     margin-left: 20px;
   }
- 
+
+  .better-nutrition-desc {
+    width: 100%;
+    height:  35%;
+  }
+
+  .box-better-nutrition {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .section-better-nutrition {
+    height: 1300px;
+  }
+
 }
