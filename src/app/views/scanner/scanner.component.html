@@ -1,7 +1,8 @@
 <app-nav-menu></app-nav-menu>
 
 <div>
-    <section [hidden]="hideSearch" class="section-layout">
+
+    <!-- <section [hidden]="hideSearch" class="section-layout">
         <div class="scanner-layout">
             <h2 style="color: #FFF">Digite o código de barras, abaixo: </h2>
 
@@ -32,6 +33,44 @@
                 Digite um código de barras!
             </div>
 
+        </div>
+    </section> -->
+
+    <section class="section-layout-scanner" [hidden]="hideSearch">
+        <div class="side-layout-scanner">
+            <div class="content-scanner">
+                <div class="text-content-scanner">
+                    <span>
+                        Digite o código de barras aqui ou utilize a câmera para escaneá-lo.
+                    </span>
+                    <div class="input-group" style="margin-top: 5%;">
+                        <!-- <div class="input-group-prepend">
+                            <span class="input-group-text" style="height: 100%;">
+                                <fa-icon [icon]="faSearch"></fa-icon>
+                            </span>
+                        </div> -->
+                        <input type="number" class="form-control" style="width: 80%;"
+                            placeholder="Digite o código de barras" [(ngModel)]="barCode" />
+                    </div>
+                    <div style="display: flex;">
+                        <button type="submit" class="btn margin-button-search" (click)="Search()">Procurar</button>
+                        <button style="margin-left: 20px;" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            type="submit" class="btn margin-button-search" (click)="OpenCam()">Abrir camera</button>
+                    </div>
+                    <div [hidden]="!showError" style="margin-top: 5%" class="alert alert-danger" role="alert">
+                        Código de Barras não encontrado!
+                    </div>
+
+                    <div [hidden]="!showErrorBarCode" style="margin-top: 5%" class="alert alert-danger" role="alert">
+                        Digite um código de barras!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-layout-scanner-img">
+            <div>
+                <img class="img-scanner-layout" src="../../../assets/img/scanner/scannerDog.png" alt="">
+            </div>
         </div>
     </section>
 
@@ -65,14 +104,14 @@
 
 <section class="section-loading" [hidden]="!showLoading">
     <div class="loading-style">
-        <img style="width: 80%;" src="../../../assets//video/dog-gif-loading-g.gif" alt="">
+        <img style="width: 80%;" src="../../../assets/video/dog-gif-loading-brown.gif" alt="">
         <p>Processando informações...</p>
     </div>
 </section>
 
 <section class="section-class" [hidden]="!showClass">
     <div class="layout-img">
-        <img class="layout-img-dog" src="../../../assets/video/Cautious dog.gif" alt="">
+        <img class="layout-img-dog" src="../../../assets/img/scanner/dogScannerResult.png" alt="">
     </div>
     <div class="layout-class">
         <div>
