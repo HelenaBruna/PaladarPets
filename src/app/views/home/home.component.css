@@ -176,7 +176,7 @@
 
 .img-cat-about {
   width: 75%;
-  margin-top: -5%;
+  margin-top: -12%;
 }
 
 .section-better-nutrition {
@@ -352,6 +352,7 @@
 
   .img-cat-about { 
     margin-left: 7%;
+    margin-top: -5%;
   }
 
   .layout-ifsp-tcc  {
