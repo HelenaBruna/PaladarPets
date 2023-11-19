@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class ScannerServiceService {
 
-  apiUrl = "https://southamerica-east1-deductive-notch-396522.cloudfunctions.net/classifier"
+  apiUrl = "https://southamerica-east1-aqueous-cortex-404423.cloudfunctions.net/classifier"
 
   constructor(private httpReq: HttpClient) { }
 
