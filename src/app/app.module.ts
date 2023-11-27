@@ -21,6 +21,7 @@ import { LoginComponent } from './views/login/login.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ScannerServiceService } from './services/scanner-service.service';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 // aqui eu estou referenciado as rotas, no caso cada rota irá aparecer um component
 // por exemplo:
@@ -56,7 +57,8 @@ const routes: Routes = [
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    MatTooltipModule
   ],
   providers: [ScannerServiceService],
   bootstrap: [AppComponent]
